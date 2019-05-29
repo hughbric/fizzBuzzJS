@@ -1,9 +1,25 @@
 function fizzBuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
+  if (fizz(number) && buzz(number)) {
     return 'FizzBuzz';
-  } else if (number % 3 === 0) {
+  } else if (fizz(number)) {
     return 'Fizz';
-  } else if (number % 5 === 0) {
+  } else if (buzz(number)) {
     return 'Buzz';
+  }
+}
+
+function fizz(number) {
+  if (number % 3 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function buzz(number) {
+  if (number % 5 === 0) {
+    return true;
+  } else {
+    return false;
   }
 }
