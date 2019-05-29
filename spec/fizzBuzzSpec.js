@@ -1,6 +1,10 @@
 describe('FizzBuzz', function() {
 
-  it('should print the number 3 as Fizz', function() {
-    expect(fizzBuzz(3)).toEqual("Fizz");
+  it('should return Fizz when 3', function() {
+    expect(fizzBuzz(3)).toEqual('Fizz');
+  });
+
+  it('should return Buzz when 5', function() {
+    expect(fizzBuzz(5)).toEqual('Buzz');
   });
 });
