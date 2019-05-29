@@ -1,25 +1,22 @@
-function fizzBuzz(number) {
-  if (fizz(number) && buzz(number)) {
+function FizzBuzz() {
+}
+
+FizzBuzz.prototype.play = function(number) {
+  if (this._fizz(number) && this._buzz(number)) {
     return 'FizzBuzz';
-  } else if (fizz(number)) {
+  } else if (this._fizz(number)) {
     return 'Fizz';
-  } else if (buzz(number)) {
+  } else if (this._buzz(number)) {
     return 'Buzz';
+  } else {
+    return number;
   }
 }
 
-function fizz(number) {
-  if (number % 3 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+FizzBuzz.prototype._fizz = function(number) {
+  return (number % 3 === 0) ? true : false;
 }
 
-function buzz(number) {
-  if (number % 5 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+FizzBuzz.prototype._buzz = function(number) {
+  return (number % 5 === 0) ? true : false;
 }
